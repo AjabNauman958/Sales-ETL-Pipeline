@@ -116,14 +116,19 @@ The following analytical queries are included:
 
 ### 1. Total sales by region and category.
    <img width="701" height="501" alt="image" src="https://github.com/user-attachments/assets/002da806-cc8e-4f01-8e36-955b4dfc3d8a" />
+   
 ### 2. Top 5 products by total revenue.
    <img width="847" height="573" alt="image" src="https://github.com/user-attachments/assets/bfe69913-98b2-409c-99d5-03f7e1a9bf3e" />
+   
 ### 3. Monthly sales trend.
    <img width="635" height="440" alt="image" src="https://github.com/user-attachments/assets/7d5affa6-ef30-4afe-bffb-1368a2ac2e71" />
+   
 ### 4. Average discount percentage by region.
    <img width="737" height="435" alt="image" src="https://github.com/user-attachments/assets/8d4203e0-bee2-4b46-9360-9f65d926d264" />
+   
 ### 5. Number of transactions with total sales greater than $1000.
    <img width="396" height="287" alt="image" src="https://github.com/user-attachments/assets/75f5e3ee-68b9-4051-ad23-d7e33792e09e" />
+   
 
 ---
 
