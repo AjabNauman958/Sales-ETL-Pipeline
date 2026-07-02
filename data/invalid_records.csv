@@ -1,0 +1,2 @@
+transaction_id,customer_id,quantity,discount,region,product_id,product_name,category,price,transaction_date,validation_error,logged_at
+T003,,-1,0.1,East,P03,Monitor,Electronics,299.5,2023-03-05,"Missing CustomerID, Invalid Quantity",2026-07-03 03:27:51.476474
