@@ -1,0 +1,6 @@
+2026-07-03 04:14:19,226 | INFO | Sales ETL Pipeline Started
+2026-07-03 04:14:19,226 | INFO | Reading JSON file...
+2026-07-03 04:14:19,228 | INFO | Records Read : 5
+2026-07-03 04:14:19,265 | INFO | Last Loaded Date : 2023-05-12 12:30:00
+2026-07-03 04:14:19,265 | INFO | Incremental Records : 0
+2026-07-03 04:14:19,265 | INFO | No new records found.
