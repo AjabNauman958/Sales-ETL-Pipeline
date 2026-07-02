@@ -4,8 +4,6 @@
 
 This project implements a Python-based ETL pipeline that processes semi-structured sales data from a JSON source and loads it into a normalized PostgreSQL database. The solution includes data validation, cleaning, transformation, incremental loading, logging and analytical SQL queries.
 
----
-
 ## Project Structure
 
 ```text
@@ -29,8 +27,6 @@ sales-etl-assessment/
 └── README.md
 ```
 
----
-
 ## Technologies Used
 
 * Python 3.x
@@ -38,8 +34,6 @@ sales-etl-assessment/
 * SQLAlchemy
 * psycopg2-binary
 * PostgreSQL
-
----
 
 ## ETL Workflow
 
@@ -55,8 +49,6 @@ The pipeline performs the following steps:
 8. Update the ETL metadata table.
 9. Generate log and invalid records files.
 
----
-
 ## Validation Rules
 
 | Rule                             | Action                                                      |
@@ -67,8 +59,6 @@ The pipeline performs the following steps:
 | Price less than or equal to 0    | Record rejected                                             |
 | Duplicate Transaction ID         | Record skipped                                              |
 
----
-
 ## Data Transformation
 
 The following transformations are applied:
@@ -78,8 +68,6 @@ The following transformations are applied:
 * Calculate Gross Amount (`Price × Quantity`).
 * Calculate Net Amount (`Gross Amount × (1 - Discount)`).
 * Round all monetary values to two decimal places.
-
----
 
 ## Incremental Loading
 
@@ -93,8 +81,6 @@ During each execution:
 
 This prevents previously loaded records from being processed again.
 
----
-
 ## Database Design
 
 The database consists of four tables:
@@ -107,8 +93,6 @@ The database consists of four tables:
 Primary keys, foreign keys and indexes have been created to maintain data integrity and improve query performance.
 
 I created indexes on columns that are frequently used in filtering, joins and reporting. For example, customer_id and product_id are used in joins, transaction_date is used for incremental loading and date-based reports and region and category are commonly used in analytical queries. These indexes reduce the amount of data PostgreSQL needs to scan, improving query performance, especially as the tables grow.
-
----
 
 ## Analytical SQL Queries
 
@@ -128,9 +112,7 @@ The following analytical queries are included:
    
 ### 5. Number of transactions with total sales greater than $1000.
    <img width="396" height="287" alt="image" src="https://github.com/user-attachments/assets/75f5e3ee-68b9-4051-ad23-d7e33792e09e" />
-   
 
----
 
 ## Logging
 
@@ -142,13 +124,9 @@ The pipeline generates an `etl.log` file containing:
 * Number of records loaded into each table
 * Execution status and errors (if any)
 
----
-
 ## Invalid Records
 
 Records that fail validation or transactions with missing customer IDs, are written to `invalid_records.csv` along with the corresponding validation reason. This provides traceability while allowing valid business transactions to continue through the pipeline where applicable.
-
----
 
 ## How to Run
 
